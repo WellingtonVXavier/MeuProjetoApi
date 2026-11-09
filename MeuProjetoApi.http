@@ -1,0 +1,30 @@
+@MeuProjetoApi_HostAddress = http://localhost:5155
+
+### Lista os produtos
+GET {{MeuProjetoApi_HostAddress}}/api/produtos
+Accept: application/json
+
+### Busca um produto
+GET {{MeuProjetoApi_HostAddress}}/api/produtos/1
+Accept: application/json
+
+### Cadastra um produto
+POST {{MeuProjetoApi_HostAddress}}/api/produtos
+Content-Type: application/json
+
+{
+  "nome": "Teclado",
+  "preco": 149.90
+}
+
+### Atualiza um produto
+PUT {{MeuProjetoApi_HostAddress}}/api/produtos/1
+Content-Type: application/json
+
+{
+  "nome": "Teclado mecânico",
+  "preco": 249.90
+}
+
+### Exclui um produto
+DELETE {{MeuProjetoApi_HostAddress}}/api/produtos/1
